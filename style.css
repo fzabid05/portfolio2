@@ -169,7 +169,7 @@ h2, h3, h4{ font-family: 'Cormorant Garamond', serif;}
 }
 */
 .bootstrap{
-    width: 70%;
+    width: 80%;
     height:100%;
     background:linear-gradient(to right , black, rgba(161, 87, 130, 0.5));
     animation:bootstrap 2s;
@@ -179,7 +179,7 @@ h2, h3, h4{ font-family: 'Cormorant Garamond', serif;}
         width:0%;
     }
     100%{
-        width:70%;
+        width:80%;
     }
 }
 
@@ -325,6 +325,7 @@ h2, h3, h4{ font-family: 'Cormorant Garamond', serif;}
     width:60%;
     margin:30px auto;
     padding:5%;
+    border-radius:5px;
 }
 .boxprojet p{margin:40px auto;}
 .boxprojet:hover{box-shadow:4px 2px 10px 0px rgba(0, 0, 0, 0.6); transition: all 2s;}
@@ -347,18 +348,32 @@ img{ width:100%;}
 }
 .visiter a {
     padding:10px;
-    background: rgb(179, 44, 123);
+
     color:white;
     letter-spacing: 0.2rem;
     word-spacing: 1rem;
     font-weight: bold;
     border-radius:5px;
+
+    background-image: linear-gradient(
+      to left,
+      black, rgba(161, 87, 130, 0.5), black
+    ) ;
+    
+    border: none ;
+    text-transform: uppercase ;
+    cursor: pointer ;
+    
+    background-size: 200% ;
+    transition: 0.6s ;
 }
+  
 .visiter a:hover{
-    background:rgba(179, 44, 123,0.7);
+    /* background:rgba(179, 44, 123,0.7);
     color:black;
     border-radius:8px;
-    box-shadow : 13px 17px 23px -1px rgba(0,0,0,0.75);
+    box-shadow : 13px 17px 23px -1px rgba(0,0,0,0.75); */
+    background-position: right ;
 }
 /*  
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -422,15 +437,77 @@ textarea{
     background:linear-gradient(to right , black, rgba(161, 87, 130, 0.5));
     transition: 2s all;
 }
-#contact1 a{text-align: left;}
-#contact1 .fa-envelope ,#contact1 .fa-phone{
+/* #contact1 a{text-align: left;} */
+/* #contact1 .fa-envelope ,#contact1 .fa-phone{
     border-radius: 50%;
     color:white;
     border: 2px solid gray;
     padding:10px;
     background-color:gray;
     margin:20px;
-}
+} */
+
+
+.iconContact{
+    position:relative;
+    height:70px;
+    width: 100%;
+    margin: 20px auto;
+  }
+  .iconHover {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #2f3640;
+   height: 40px;
+   border-radius: 40px;
+   padding: 10px;
+  }
+  
+  .iconHover:hover > .iconText {
+   width: 180px;
+   padding: 0 6px;
+  }
+  
+  .iconHover:hover > .iconBtn {
+   background: white;
+   color: black;
+  }
+  
+  .iconBtn {
+   float: right;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background: #2f3640;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.4s;
+   color: white;
+   cursor: pointer;
+  }
+  
+  .iconBtn > i {
+   font-size: 30px;
+  }
+  
+  .iconText {
+   float: left;
+   padding: 0;
+   color: white;
+   font-size: 16px;
+   transition: 0.4s;
+   line-height: 40px;
+   width: 0px;
+   font-weight: bold;
+    overflow:hidden
+  }
+  
+
+
+
 /* 
 ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
 ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
@@ -588,6 +665,7 @@ footer{
         background-color: #ffffff;
         padding:20px;
         padding-top:30px;
+        border-radius:5px;
     }  
     .titre{
         background-color: #353131;
@@ -623,6 +701,7 @@ footer{
         text-align-last: initial;
         margin:0 auto;
         padding:20px;
+        border-radius:5px;
     } 
     .titreP{
         background-color: #F2F2F2;
@@ -642,6 +721,7 @@ footer{
     .titre, .titreP{
         transform: translateY(100px);
         transition: transform 3s;
+        border-radius:5px;
     }
     /*
     ██████╗ ██████╗ ███╗   ███╗██████╗ ███████╗████████╗███████╗███╗   ██╗ ██████╗███████╗███████╗
@@ -705,10 +785,20 @@ footer{
     //////////////////////////////////////////////// 
     */
     #contact1{
-        width:85%;
+        /* width:85%; */
         margin:30px auto;
     }
-
+    #contact1 p{
+        text-align: center;
+        margin: 10px;
+    }
+    .iconBtn{
+        display: none;
+    }
+    .iconText{
+        width: 200px;
+        text-align: center;
+    }
     /* 
     ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
     ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
@@ -830,12 +920,14 @@ footer{
         margin: 60px auto;
         margin-top:100px;
         padding-top:100px;
+        border-radius:5px;
     }                                 
     .titre{
         background-color: #353131;
         text-align:center;
         color:#dfdbdb;
         position:absolute;
+        border-radius:8px;
         width:20%;
         top: 10%;
         left: -10%;
@@ -866,8 +958,9 @@ footer{
         width:60%;
         position:relative;            
         padding-top:100px;          
-        margin-top:100px; 
-        margin-bottom:50px;                                  
+        margin-top:30px; 
+        margin-bottom:50px;        
+        border-radius:5px;                          
     }      
     .titreP{     
         background-color: #F2F2F2;
@@ -877,6 +970,7 @@ footer{
         top: 10%;   
         right: -10%;          
         width:20%;
+        border-radius:8px;
     }     
     .paragrapheP{
         width:70%;
@@ -906,7 +1000,7 @@ footer{
     }
     #competence{
         padding-top:100px;
-        margin-top:100px;
+        margin-top:-50px;
         font-size: 3rem;
     }
     .competence-container{
@@ -932,7 +1026,7 @@ footer{
     */
     #projets{
         padding-top:100px;
-        margin-top:100px;
+        margin-top:-50px;
         font-size: 3rem;
     }
     h4{
@@ -945,11 +1039,11 @@ footer{
     //////////////////////////////////////
     */
     #contact1{
-        width:40%;
+        /* width:40%; */
         margin:50px auto;
-        text-align-last: left;
+        /* text-align-last: left; */
     }
-    #contact1 .fa-envelope ,#contact1 .fa-phone{ font-size:1.5rem;}
+    /* #contact1 .fa-envelope ,#contact1 .fa-phone{ font-size:1.5rem;} */
 
     /* 
     ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 

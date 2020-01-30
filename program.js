@@ -79,7 +79,7 @@
 $(document).ready(function(){
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
-    if (scroll < 100) {
+    if (scroll < 500) {
       $("nav.menu-fixe").css("background" , "rgba(255, 255, 255, 0.1)");
     }
 
