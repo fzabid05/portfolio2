@@ -19,17 +19,15 @@
         menu.classList.remove("open") ;
         menu.dataset.etat = "open";
       }
-    }
-  })();
+    };
+
 
   
 // ------------------------------------ Animation des titres au scroll --------------
 
-(function() {
+
 
   var elements = document.querySelectorAll(".js-textAnim");
-
-  
 
   var animTitles = function() {
     elements.forEach(function(element) {
@@ -62,8 +60,6 @@
       "transition" : "all 2s"
     })
  
-     
-     
      var numLi = $(".competence-box li").index(event.currentTarget);
      console.log("ma li no",numLi);
 
@@ -79,8 +75,8 @@
 $(document).ready(function(){
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
-    if (scroll < 500) {
-      $("nav.menu-fixe").css("background" , "rgba(255, 255, 255, 0.1)");
+    if (scroll < 200) {
+      $("nav.menu-fixe").css("background" , "rgba(255, 255, 255, 0)");
     }
 
     else{
@@ -89,6 +85,8 @@ $(document).ready(function(){
     
   })
 //})
+
+
    // ----------------------------------- go to top  ------------------------------------
   
    //$(document).ready(function(){
@@ -121,4 +119,23 @@ $(document).ready(function(){
     });
     });
 
-   
+    // ---------------------- deffilement lettres
+    var typeString = ["Persévérante", "Organisée", "Sérieuse", "Créative", "Autonome", "Passionnée par le développement web "];
+    var  i = 0;
+    var count = 0
+    var selectedText = '';
+    var text = '';
+    (function type() {
+      if (count == typeString.length) {
+        count = 0;
+      }
+    
+      selectedText = typeString[count];
+      text = selectedText.slice(0, ++i);
+      document.getElementById('typing').innerHTML = text;
+      if (text.length === selectedText.length) {
+        count++;
+        i = 0;
+      }
+      setTimeout(type, 200);
+    }());

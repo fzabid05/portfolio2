@@ -13,6 +13,12 @@
 ///////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////
 */
+:root {
+    --button:red;
+}
+em{
+    color:var(--button);
+}
 *{
     padding:0;
     margin:0;
@@ -302,11 +308,13 @@ h2, h3, h4{ font-family: 'Cormorant Garamond', serif;}
         width:60%;
     }
 }
-
-.lettre{
-    color:#D93D86;
-    text-transform:uppercase;
-}
+.txt-type > .txt {
+    border-right: 0.2rem solid #777;
+  }
+  .typing{
+      margin-top: 30px;
+      font-weight: bold;
+  }
 /*
 ██████╗ ██████╗  ██████╗      ██╗███████╗████████╗
 ██╔══██╗██╔══██╗██╔═══██╗     ██║██╔════╝╚══██╔══╝
@@ -380,27 +388,30 @@ img{ width:100%;}
  contact    
 /////////////////////////////////////////////
 */
-#contact{background: rgba(0,0, 0,0.99);}
+#contact{background: rgb(39, 37, 37);}
 #contact .container-ct{
-    color:white; 
-    width:300px;
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
+    color:white;
 }
-#contact h3{
+#contact h1{
     font-size:2em;
-    margin-bottom:50px;
+    margin:50px auto;
     padding:15px 0;
     text-align: center;
+}
+#contact p{
+    text-align: center;
+   
+}
+#contact form{
+    width:300px;
+    margin: auto;
 }
 #contact .formulaire-text{
     width: 100%;
     overflow: hidden;
     font-size: 20px;
     padding:8px 0;
-    margin:8px 0;
+    margin:20px 0;
     border-bottom: 1px solid #D93D86; 
 }
 #contact .formulaire-text a{
@@ -418,7 +429,7 @@ img{ width:100%;}
     float: left;
     margin:0 10px;
 }
-textarea{
+#contact textarea{
     min-width: 90%;
     max-width: 90%;
 }
@@ -446,7 +457,10 @@ textarea{
     background-color:gray;
     margin:20px;
 } */
-
+#contact .fa-chevron-right{
+    font-size: 12px;
+    margin: 8px;
+}
 
 .iconContact{
     position:relative;
@@ -460,8 +474,8 @@ textarea{
    left: 50%;
    transform: translate(-50%, -50%);
    background: #2f3640;
-   height: 40px;
-   border-radius: 40px;
+   height: 30px;
+   border-radius: 30px;
    padding: 10px;
   }
   
@@ -477,8 +491,8 @@ textarea{
   
   .iconBtn {
    float: right;
-   width: 40px;
-   height: 40px;
+   width: 30px;
+   height: 30px;
    border-radius: 50%;
    background: #2f3640;
    display: flex;
@@ -490,7 +504,7 @@ textarea{
   }
   
   .iconBtn > i {
-   font-size: 30px;
+   font-size: 20px;
   }
   
   .iconText {
@@ -499,7 +513,7 @@ textarea{
    color: white;
    font-size: 16px;
    transition: 0.4s;
-   line-height: 40px;
+   line-height: 30px;
    width: 0px;
    font-weight: bold;
     overflow:hidden
@@ -570,7 +584,31 @@ footer{
     margin-bottom:1rem;
 }
 .politique p,.politique ul,  .mentions-l p{padding-left:2rem;}
-
+.errorPage {
+    background:linear-gradient(to top , black, rgb(161, 87, 130));
+    height: 100vh;
+    color:white;
+}
+.errorPage section{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.errorPage h1{
+    font-size: 5rem;
+}
+.errorPage div{
+     margin: 30px auto;
+}
+.errorPage a{
+   
+    color:black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
 /* 	 
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -619,8 +657,8 @@ footer{
         top:0;
         z-index: 200;
         width:100%;
-        background-color:rgba(255,255,255,0) important!;
     }
+   
     .menu{ display:none; }
     .menu.open{
         padding:20px auto;
@@ -784,13 +822,9 @@ footer{
     contact   
     //////////////////////////////////////////////// 
     */
-    #contact1{
+    .contact1{
         /* width:85%; */
         margin:30px auto;
-    }
-    #contact1 p{
-        text-align: center;
-        margin: 10px;
     }
     .iconBtn{
         display: none;
@@ -798,6 +832,9 @@ footer{
     .iconText{
         width: 200px;
         text-align: center;
+    }
+    #contact .retour{
+        margin: 20px;
     }
     /* 
     ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
@@ -1038,13 +1075,18 @@ footer{
     contact
     //////////////////////////////////////
     */
-    #contact1{
+    .contact1{
         /* width:40%; */
         margin:50px auto;
         /* text-align-last: left; */
     }
-    /* #contact1 .fa-envelope ,#contact1 .fa-phone{ font-size:1.5rem;} */
-
+   #contact .container-ct{
+    width: 600px;
+    margin: 50px auto;
+    }
+    #contact .retour{
+        margin-left: 150px;
+    }
     /* 
     ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
     ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗

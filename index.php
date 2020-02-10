@@ -47,7 +47,7 @@
                         <li><a href="#parcours">Parcours</a></li>
                         <li><a href="#competence">Compétences</a></li>
                         <li><a href="#projets">Projets</a></li>
-                        <li><a href="#contact1">Contact</a></li>
+                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </nav>
             </header>
@@ -55,13 +55,12 @@
                 <section id="apropos">
                     <div class="titre js-textAnim"><h2>A propos</h2></div>
                     <div class="paragraphe">
-                        <p>Bonjour je m'appelle Fatima-Zohra , j'ai toujours été attiré par les nouvelles technologies <br>
-                            Avant de me reconvertir professionnellement j'ai beaucoup réfléchi à mon avenir et j'ai décidé de choisir un métier qui me passionne , le développement web<br>
-                            J'ai effectué un bilan de compétences qui m'a conforté dans mon choix de reconversion , j'ai commencé sur <a href="https://openclassrooms.com/fr/">OpenClassrooms</a> et la j'y ai pris goût ,
+                        <p>Bonjour je m'appelle Fatima-Zohra , j'ai toujours été attiré par les nouvelles technologies <p>
+                        <p>j'ai commencé à apprendre à coder sur <a href="https://openclassrooms.com/fr/">OpenClassrooms</a>,
                             après j'ai fait des formations pour avoir de bonnes bases et approfondir mes connaissances.<br>
                             Mon ancien métier et mon diplôme d'ingénieure en biologie m'ont permis d'acquérir des compétences qui sont importantes pour un développeur web.
-                            </p>
-                        <div class="visiter"><a href="cv-abid-fatima-zohra-developpeuse-web.pdf" title="Voir le CV" target="_blank">Voir le CV</a></div>
+                        </p>
+                    <div class="visiter"><a href="cv-abid-fatima-zohra-developpeuse-web.pdf" title="Voir le CV" target="_blank">Voir le CV</a></div>
                     </div>
                 </section>
                 <section class="parallax-centre one">
@@ -70,7 +69,7 @@
                     <div class="titreP js-textAnim"><h2>Parcours</h2></div>
                     <div class="paragrapheP">
                         <h3>Sep <span class="date">2019</span> - Jan <span class="date">2020</span></h3>
-                            <div>Formation intensive Développeur web et web mobile full stack à <a href="https://www.wf3.fr/">WebForce3</a> ( 602 h ) labellisée <strong>GEN</strong> (Grande Ecole du Numérique)
+                            <div>Formation intensive Développeur web et web mobile full stack à <a href="https://www.wf3.fr/" target="_blank">WebForce3</a> ( 602 h ) labellisée <strong>GEN</strong> (Grande Ecole du Numérique)
                                 <ul>Obtention de certifications CNCP :
                                     <li> - Techniques d’intégration Web </li>
                                     <li> - Techniques de développement Web </li>
@@ -168,7 +167,7 @@
                             </div>
                     </article>
                         <h4>Savoir être</h4>
-                           <p><span class="lettre">o</span>rganisée , <span class="lettre">P</span>ersévérante , <span class="lettre">C</span>urieuse , <span class="lettre">C</span>réative , <span class="lettre">a</span>utonome , j'aime travailler en <span class="lettre">é</span>quipe et le plus important je suis <span class="lettre">passionnée</span> par le développement web</p>
+                           <div id="typing" class="typing"></div>
                 </section>
                 <section class="parallax-centre three">
                 </section>
@@ -195,30 +194,7 @@
                             <div class="visiter"><a href="https://www.fabid.fr/parimis" target="_blank">Voir le site</a></div>
                         </div>
                 </section>
-                <section id="contact1">
-                    <p>Si vous souhaitez me contacter, vous pouver le faire par <br>
-                        <!-- <a class="fas fa-phone"></a><a href="tel:0033635794348">06 35 79 43 48</a><br>
-                        <a class="fas fa-envelope"></a><a href="mailto:abidzora88@gmail.com">abidzora88@gmail.com</a> </p> -->
-                        <!-- ou via le formulaire de contact ci-dessous. -->
-
-                        <div class="iconContact">
-                            <div class="iconHover">
-                              <a href="mailto:abidzora88@gmail.com" class="iconText">abidzora88@gmail.com</a>
-                             <a class="iconBtn">
-                               <i class="fas fa-envelope"></i>
-                             </a>
-                            </div>
-                          </div>
-                          
-                          <div class="iconContact">
-                            <div class="iconHover">
-                              <a href="tel:0033635794348" class="iconText">0635794348</a>
-                             <a class="iconBtn">
-                               <i class="fas fa-phone"></i>
-                             </a>
-                            </div>
-                          </div>
-                </section>
+                
             </main>
             <footer>
                 <div class="reseaux">
